@@ -57,7 +57,7 @@ form{
     margin-top: 38px;
     background:  #fafafa;
     min-height: 300px;
-    border-radius: 8px;
+    border-radius: 8px 8px 0 0 ;
     padding: 64px;
     display: flex;
     flex-direction: column;
@@ -65,8 +65,7 @@ form{
 }
 
 fieldset{
-    border: none;
-    
+    border: none;    
 }
 
 .fieldset-wrapper{
@@ -149,10 +148,12 @@ fieldset legend{
 
 .checkbox-wrapper label{
     display: flex;
+    align-items: center;
     margin: 0;        
+    gap:16px 
 }
 .checkbox-wrapper input{
-    display: none;;
+    display: none;
 }
 
 .checkbox-wrapper label::before{
@@ -161,4 +162,40 @@ fieldset legend{
     height: 24px;
     border: 1px solid #e6e6f0;
     border-radius: 8px;
+}
+
+.checkbox-wrapper input:checked + label::before{
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_756_20)'%3E%3Cpath d='M9 16.17L4.83 12L3.41 13.41L9 19L21 7L19.59 5.59L9 16.17Z' fill='%2342D3FF'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_756_20'%3E%3Crect width='24' height='24' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+}
+
+footer{
+    background: #f0f0f4;
+    height: 136px;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 64px;
+    margin-bottom: 100px;
+    border-top: 1px solid #d6d6d6;
+    border-radius: 0 0 8px 8px;
+}
+
+footer .button{
+    height: 56px;
+    border-radius: 8px;
+    background: #04d361; 
+    font-family: 'Archivo';
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 26px;
+    color: #ffffff; 
+    border: 0; 
+    
+}
+
+footer .button:hover{
+    background: #026e33;
+}
+
+input:invalid{
+    border: 1px solid red;
 }
